@@ -29,7 +29,7 @@ const GET_CARDS_RESPONSE = [
         title: 'change background',
         description: 'please, change background to red',
         userId: 1,
-        columnId: 17
+        columnId: 65
     }
 ];
 
