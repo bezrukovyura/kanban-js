@@ -32,6 +32,12 @@ function getCardsByColumnId(id) {
 }
 
 function getCard(title, description, userName, userPhoto) {
+    let selectUsersHtml = `<select>`;
+    GET_USERS_RESPONSE.forEach(user => {
+        selectUsersHtml += `<option>${user.name}</option>`;
+    });
+    selectUsersHtml += `</select>`;
+
     return `<div class="card">
                 <div class="card__inform">
                     <div class="card__title">${title}</div>
@@ -41,9 +47,12 @@ function getCard(title, description, userName, userPhoto) {
                     <div class="card__user-photo">
                         <img src="${userPhoto}" >
                     </div>
-                    <div class="card__user-name">${userName}</div>
+                    <div class="card__user-name">${selectUsersHtml}</div>
                 </div>
             </div>`;
 }
+
+
+
 
 
